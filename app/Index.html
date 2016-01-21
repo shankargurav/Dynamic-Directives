@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="js/controller.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css"></link>
+
+    <title>
+        Dynamic Fields and Directive Binding
+    </title>
+</head>
+
+<body>
+    <div ng-app="MyApp">
+        <h1>Dynamic Fields and Directive Binding</h1>
+        <div ng-controller="FieldEditorPageController as pageCtrl">
+
+            <div>
+                <div ng-repeat="field in pageCtrl.fields track by $index">
+                    <div class="fileContainer">
+                        <div>
+                            {{ $index + 1 }}.
+                        </div>
+                        <div>
+                            <div>
+                                <label>Button Type:</label>
+                                <select ng-model="field.type" ng-options="entry.value as entry.title for entry in pageCtrl.inputTypes" name="field_type"
+                                required>
+                                </select>
+                                <app-button type="{{field.type}}" text="button" model="field">
+                                </app-button>
+                            </div>
+                            <div>
+                                <a href="" ng-click="pageCtrl.removeField(field)">Remove</a>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                </div>
+                <div>
+                    <span>
+                        <a href="" ng-click="pageCtrl.newField()">
+                        Add Button
+                        </a>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

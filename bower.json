@@ -1,0 +1,10 @@
+{
+"name":"AngularJs Dynamic Directive",
+"description":"This app demonstrates how to use directives to create reusable compents",
+"version":"0.0.0.0",
+"homepage": "/app/index.html",
+"private": true,
+"dependencies":{
+	"angular":"1.4.x"
+	}
+}

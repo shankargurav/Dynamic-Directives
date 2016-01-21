@@ -1,0 +1,10 @@
+body {
+    background: #f3f5f6;
+    overflow: hidden;
+    position: relative;
+    font-size: 14px;
+}
+.fileContainer div{
+    display: inline-block;
+}
+
