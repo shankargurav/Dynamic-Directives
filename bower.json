@@ -5,6 +5,7 @@
 "homepage": "/app/index.html",
 "private": true,
 "dependencies":{
-	"angular":"1.4.x"
+	"angular":"1.4.x",
+    "angular-mocks": "*"
 	}
 }
